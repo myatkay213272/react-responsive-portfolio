@@ -25,7 +25,7 @@ const Header = () => {
       />
 
 
-    <Flex 
+    {/* <Flex 
       direction={isNotSmallScreen ? "row" : "column"}
       spacing="200px" 
       p={isNotSmallScreen ? "32" : "0"}
@@ -49,8 +49,8 @@ const Header = () => {
         </Button>
       </Box>
 
+      <Box mx={isNotSmallScreen ? 0 : "center"}>
       <Image 
-        alignSelf="center" 
         mt={isNotSmallScreen ? "0" : "12"}
         mb={isNotSmallScreen ? "0" : "12"} 
         borderRadius="full"
@@ -58,8 +58,49 @@ const Header = () => {
         boxShadow="lg" 
         boxSize="300px"
         src={logo}
+        alt="Profile Photo"
       />
-    </Flex>
+    </Box>
+
+    </Flex> */}
+
+
+<Flex 
+  direction={isNotSmallScreen ? "row" : "column"}
+  spacing="200px" 
+  p={isNotSmallScreen ? "32" : "0"}
+  align="center"
+  justify="center"
+  w="100%"
+>
+  {/* Text First - Always First */}
+  <Box mt={isNotSmallScreen ? "0" : 16} align={isNotSmallScreen ? "flex-start" : "center"}>
+    <Text fontSize="3xl" fontWeight="semibold">Hi, I am</Text>
+    <Text fontSize="5xl" fontWeight="bold" 
+      bgGradient="linear(to-r,cyan.400,blue.500,purple.600)" bgClip="text">
+      NovaCore
+    </Text>
+    <Text color={isDark ? "gray.200" : "gray.500"}>
+      Would you like suggestions based on a specific theme (e.g. dark mode, AI, minimal, etc.)?
+    </Text>
+    <Button mt={8} colorScheme='blue' onClick={() => window.open("https://pawan.live")}>
+      Click Me
+    </Button>
+  </Box>
+
+  {/* Image Second - Always After Text */}
+  <Box mx={isNotSmallScreen ? 0 : "auto"} mt={isNotSmallScreen ? "0" : "12"} mb={isNotSmallScreen ? "0" : "12"}>
+    <Image 
+      borderRadius="full"
+      backgroundColor="transparent" 
+      boxShadow="lg" 
+      boxSize="300px"
+      src={logo}
+      alt="Profile Photo"
+    />
+  </Box>
+</Flex>
+
 
       
     </Stack>

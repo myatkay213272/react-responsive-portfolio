@@ -7,15 +7,13 @@ const Social = () => {
   return (
     
 
-    <HStack spacing="18">
-
-    <FontAwesomeIcon icon={faFacebook} boxSize="50"/>
-    <FontAwesomeIcon icon={faGoogle} boxSize="50"/>
-    <FontAwesomeIcon icon={faSpotify} boxSize="50"/>
-    <FontAwesomeIcon icon={faShopify} boxSize="50"/>
-
-
+    <HStack spacing="40px">
+        <FontAwesomeIcon icon={faFacebook} style={{ fontSize: '40px' }} />
+        <FontAwesomeIcon icon={faGoogle} style={{ fontSize: '40px' }} />
+        <FontAwesomeIcon icon={faSpotify} style={{ fontSize: '40px' }} />
+        <FontAwesomeIcon icon={faShopify} style={{ fontSize: '40px' }} />
     </HStack>
+
 
   )
 }
